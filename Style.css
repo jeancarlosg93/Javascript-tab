@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
 }
+
 body{
     background: lightgray;
 }
+
 .tab{
     width: 500px;
     overflow: hidden;
-
+            /* border: 1px solid black; */
 }
+
 .tab button{
     background: red;
     border: none;
@@ -21,8 +24,9 @@ body{
 }
 
 .tab button:hover{
-    background-color: rgb(165, 5, 5);
+            background: rgb(165, 5, 5);
 }
+
 .tab button.active{
     background: green;
 }

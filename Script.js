@@ -2,18 +2,23 @@ const tabButtons = document.querySelectorAll('.tablink');
 for (var i = 0; i<tabButtons.length; i++){
     tabButtons[i].addEventListener('click', function(){
         var tabName= this.dataset.tab;
-        var tabContent =  document.getElementById(tabName);
-        var allTabContent = document.querySelectorAll('.tabcontent');
-        var allTabButton =  document.querySelectorAll('.tablink');
-        for (var j = 0; j<allTabContent.length; j++){
-            allTabContent[j].style.display = 'none';
+        console.log(tabName);
+        var TabContent =  document.getElementById(tabName);
+        console.log(TabContent);
+        var allTabcontent = document.querySelectorAll('.tabcontent');
+        var allTabButtons =  document.querySelectorAll('.tablink');
+
+        for (var j = 0; j<allTabcontent.length; j++){
+            console.log(allTabcontent[j]);
+            allTabcontent[j].style.display = 'none';
         }
-        for (var k = 0 ; k<allTabContent.length; k++){
-            allTabButton[s].classList.remove('active')
+
+        for (var k = 0 ; k<allTabcontent.length; k++){
+            allTabButtons[k].classList.remove('active');
         }
-        tabContent.style.display = "block";
+
+        TabContent.style.display = "block";
         this.classList.add('active');
     });
-
 }
-document.querySelector('.tablink').click();
+        document.querySelector('.tablink').click();
